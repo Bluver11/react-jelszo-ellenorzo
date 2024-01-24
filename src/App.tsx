@@ -5,13 +5,14 @@ import  Main  from './components/Main'
 
 
 function App() {
-return <div>
+    console.log('App re-render')
+    return <div>
 
-    <Header/>
-    <Main/>
-    <Footer/>
+        <Header/>
+        <Main/>
+        <Footer/>
 
-</div>
+    </div>
   
  
 }
