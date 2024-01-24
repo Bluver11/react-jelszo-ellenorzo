@@ -1,7 +1,15 @@
 interface Props{
+    /**
+    * Az ellenőrizendő jelszó
+    */
     password: string
 }
 
+
+/**
+ * Ellenőrzi hogy a megadott jelszó milyen erős,
+ * és ezt formázva megjelentíti.
+ */
 
 export function PasswordChecker(props: Props){
     
