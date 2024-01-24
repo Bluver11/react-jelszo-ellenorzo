@@ -3,6 +3,7 @@ interface Props{
     * Az ellenőrizendő jelszó
     */
     password: string
+    passwordAgain: string
 }
 
 
@@ -14,6 +15,7 @@ interface Props{
 export function PasswordChecker(props: Props){
     
     let text = '';
+    let text2 = ''
     let textColor ='';
     
     
@@ -28,10 +30,18 @@ export function PasswordChecker(props: Props){
         text = 'Erős jelszó';
         textColor='green';
     }
+
+    if(props.password != props.passwordAgain){
+        textColor ='red';
+        text2 += 'A két jelszó nem egyezik!';
+    }
     
     
     return <p style={{color: textColor}}>
         {text}
+        {text2==''? null : <br/>}
+        {text2}
+        
     </p>
 
     
